@@ -67,7 +67,7 @@ longjing.call('loadSuccess');  // 告知app，页面加载完成
 // 主动调用方法，有返回值
 // app返回的是{code:0,data:{ip:'127.0.0.1'}};
 // longjing过滤出返回值中的data
-var appId = longjing.call('getAppId').appId;
+var appId = longjing.call('getAppId').id;
 ```
 
 * 示例三:
@@ -97,9 +97,7 @@ longjing.register(fnName,data,callback);
 
 ```
 // 注册一个软键盘状态改变时通知
-longjing.register('SOFT_INPUT_CHANGED ',function(){
-
-});
+longjing.register('SOFT_INPUT_CHANGED ',function(){});
 ```
 
 ## 介绍
@@ -119,7 +117,7 @@ longjing.register('SOFT_INPUT_CHANGED ',function(){
 
 * 使用示例：
 ```
-let appid = longjing.call('getAppId');
+let appid = longjing.call('getAppId').id;
 ```
 
 ### 读取配置(readConfig)
@@ -185,7 +183,7 @@ longjing.call('tts.speak',{text:'需要语音叫号的内容'},function(){
 
 ### 只读配置(config)
 
-* 只读配置
+* 只读配置项
 
 |名称|	字段|	类型|	说明|
 |--|--|--|--|
