@@ -131,7 +131,12 @@ let appid = longjing.call('getAppId').id;
 * 使用示例：
 
 ```
-let config = longjing.call('readConfig');
+//方式1：
+let config = longjing.call('readConfig').content; // 获取全部配置
+//方式2：
+let config = longjing.config(); // 获取全部配置
+//方式3：
+let name = longjing.config('name'); // 获取指定配置的值
 ```
 
 ### 写入配置(writeConfig)
@@ -147,7 +152,10 @@ let config = longjing.call('readConfig');
 * 使用示例：
 
 ```
-longjing.call('writeConfig',{content:'配置内容'});
+//方式1:
+longjing.call('writeConfig',{content:'配置内容'}); // 此方式会覆盖所有配置内容
+//方式2：
+longjing.config('name','张三');  // 此方式增加一项配置，不会删除已有配置内容
 ```
 
 ### 加载成功(loadSuccess)
