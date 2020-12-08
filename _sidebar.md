@@ -1,7 +1,7 @@
 * [使用](README)
   * [介绍](start/overview)
   * [快速使用](start/quick)
-  * [介绍](start/h5)
+  * [web开发标准](start/h5)
 * [JsSDK](jssdk/README)
 * [技术支持](support/README)
 	* [离线应用](support/offlineApp)
