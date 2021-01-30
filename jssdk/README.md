@@ -205,8 +205,8 @@ longjing.call('tts.speak',{text:'需要语音叫号的内容'},function(){
 * 使用示例：
 
 ```
-longjing.call('setLedColor',{type:1,color:1});
-longjing.setLedColor({type:1,color:1});
+longjing.call('setLedColor',{type:1,color:'ff0000'});
+longjing.setLedColor({type:1,color:'ff0000'});
 ```
 
 ### 只读配置(config)
