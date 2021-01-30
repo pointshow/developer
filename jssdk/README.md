@@ -189,6 +189,26 @@ longjing.call('tts.speak',{text:'需要语音叫号的内容'},function(){
 });
 ```
 
+### 设置Led颜色(setLedColor)
+
+* 说明：该方法只能部分设备可以使用
+
+ * 输入:
+
+|名称|字段|类型|可选|说明|
+|--|--|--|--|--|
+|类型|type|init|N|DEVICE_DR = 1;//德睿  DEVICE_QS = 2;//仟视  DEVICE_SKW = 3;//盛科维|
+|颜色|color|string|N|if( type == DEVICE_SKW  ){16进制指令，例如: ff0000 红色}else {LED_OFF = 0; // 关灯LED_COLOR_RED = 1; // 红灯LED_COLOR_GREEN = 2; // 绿灯LED_COLOR_YELLOW = 3; // 黄灯}|
+
+* 输出：无
+
+* 使用示例：
+
+```
+longjing.call('setLedColor',{type:1,color:1});
+longjing.setLedColor({type:1,color:1});
+```
+
 ### 只读配置(config)
 
 * 只读配置项
