@@ -226,6 +226,97 @@ longjing.setLedColor({type:1,color:'ff0000'});
 let deviceNumber = longjing.config('deviceNumber');
 ```
 
+### 驱动(driver)
+
+#### 开启RFID(startRFID)
+
+* 说明：该方法只能部分设备可以使用
+
+* 输入: 无
+
+* 输出：异步输出
+
+|名称|字段|类型|可选|说明|
+|--|--|--|--|--|
+|数据|data|JSON String|N||
+
+* 使用示例：
+
+```
+longjing.call('driver.startRFID',function(res){
+	// 异步输出数据 res.data.data
+	// res数据结构如下：
+	// {
+	// 	"code":0,
+	// 	"data":{
+	// 		"data":数据data
+	// 	}
+	// }
+});
+```
+
+
+#### 关闭RFID(stopRFID)
+
+* 说明：该方法只能部分设备可以使用
+
+* 输入: 无
+
+* 输出：无
+
+* 使用示例：
+
+```
+longjing.call('driver.stopRFID');
+```
+
+
+### 开启红外感应(startInfrared)
+
+* 方法： startInfrared
+
+* 说明：该方法只能部分设备可以使用
+
+* 输入: 无
+
+* 输出：异步输出
+
+|名称|字段|类型|可选|说明|
+|--|--|--|--|--|
+|数据|data|JSON String|N||
+
+* 使用示例：
+
+```
+longjing.call('driver.startInfrared',function(res){
+	// 异步输出数据 res.data.data
+	// res数据结构如下：
+	// {
+	// 	"code":0,
+	// 	"data":{
+	// 		"data":数据data
+	// 	}
+	// }
+});
+```
+
+
+### 关闭红外感应(stopInfrared)
+
+* 方法： stopInfrared
+
+* 说明：该方法只能部分设备可以使用
+
+* 输入: 无
+
+* 输出：无
+
+* 使用示例：
+
+```
+longjing.call('driver.stopInfrared');
+```
+
 ## 通知
 ### 软键盘状态改变(SOFT_INPUT_CHANGED )
 
